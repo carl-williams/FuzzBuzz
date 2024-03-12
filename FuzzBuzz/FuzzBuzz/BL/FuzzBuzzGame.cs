@@ -4,9 +4,6 @@ namespace FuzzBuzz.BL
 {
     internal class FuzzBuzzGame : IFuzzBuzzGame
     {
-        private const string FuzzString = "Fuzz";
-        private const string BuzzString = "Buzz";
-
         public string GetTextForNumber(int number)
         {
             string result = "";
@@ -24,7 +21,7 @@ namespace FuzzBuzz.BL
 
         public string GetTextForNumberEnumerable(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            return string.Join(' ', numbers.Select(n => GetTextForNumber(n)));
         }
     }
 }

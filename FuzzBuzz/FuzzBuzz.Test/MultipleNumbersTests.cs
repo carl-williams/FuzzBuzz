@@ -17,8 +17,8 @@ namespace FuzzBuzz.Test
         {
             var numbers = new List<int>
             {
-                3, 6, 9,
-                12, 18,
+                3, 6, 9, 
+                12, 18,  
                 21, 24, 27,
                 33, 36, 39,
                 42, 48,
@@ -30,7 +30,7 @@ namespace FuzzBuzz.Test
             };
 
             var gameResult = GameEngine.GetTextForNumberEnumerable(numbers);
-            var expectedresult = string.Concat(Enumerable.Repeat("Fuzz ", 36));
+            var expectedresult = string.Concat(Enumerable.Repeat("Fuzz ", 27)).Trim();
             Assert.That(gameResult, Is.EqualTo(expectedresult));
         }
 
@@ -55,7 +55,7 @@ namespace FuzzBuzz.Test
             };
 
             var gameResult = GameEngine.GetTextForNumberEnumerable(numbers);
-            var expectedresult = string.Concat(Enumerable.Repeat("Buzz ", 13));
+            var expectedresult = string.Concat(Enumerable.Repeat("Buzz ", 13)).Trim();
             Assert.That(gameResult, Is.EqualTo(expectedresult));
         }
 
@@ -73,7 +73,7 @@ namespace FuzzBuzz.Test
             };
 
             var gameResult = GameEngine.GetTextForNumberEnumerable(numbers);
-            var expectedresult = string.Concat(Enumerable.Repeat("FuzzBuzz ", 6));
+            var expectedresult = string.Concat(Enumerable.Repeat("FuzzBuzz ", 6)).Trim();
             Assert.That(gameResult, Is.EqualTo(expectedresult));
         }
 
@@ -90,7 +90,7 @@ namespace FuzzBuzz.Test
                 40, 47
             };
             var gameResult = GameEngine.GetTextForNumberEnumerable(numbers);
-            var expectedresult = "2 Buzz Fuzz 23 FuzzBuzz 38 39 Fuzz Buzz 47";
+            var expectedresult = "2 Buzz Fuzz 23 FuzzBuzz 38 Fuzz Fuzz Buzz 47";
             Assert.That(gameResult, Is.EqualTo(expectedresult));
         }
     }

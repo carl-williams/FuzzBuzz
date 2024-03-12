@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FuzzBuzz.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a627d06702ffa0c4b10229ce73b82f3413619c36")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5ce0e094c223b52a85e0359c66a778f56aa100f")]
 [assembly: System.Reflection.AssemblyProductAttribute("FuzzBuzz.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FuzzBuzz.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
