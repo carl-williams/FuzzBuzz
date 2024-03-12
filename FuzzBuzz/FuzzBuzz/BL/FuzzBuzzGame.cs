@@ -1,18 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FuzzBuzz.Interfaces;
+﻿using FuzzBuzz.Interfaces;
 
 namespace FuzzBuzz.BL
 {
     internal class FuzzBuzzGame : IFuzzBuzzGame
     {
+        private const string FuzzString = "Fuzz";
+        private const string BuzzString = "Buzz";
+
         public string GetTextForNumber(int number)
         {
-            throw new NotImplementedException();
+            string result = "";
+            if (number % 3 == 0)
+            {
+                result = "Fuzz";
+            }
+            if (number % 5 == 0)
+            {
+                result = $"{result}Buzz";
+            }
+
+            return string.IsNullOrEmpty(result) ? number.ToString() : result;
         }
 
         public string GetTextForNumberEnumerable(IEnumerable<int> numbers)
